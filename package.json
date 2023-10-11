@@ -1,0 +1,26 @@
+{
+  "name": "code-verifier-backend_01",
+  "version": "1.0.0",
+  "description": "Backend Node + Express + TS + Swagger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegopaff/code-verifier-backend_01.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "typescript",
+    "swagger",
+    "mongoose"
+  ],
+  "author": "@diegopaff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegopaff/code-verifier-backend_01/issues"
+  },
+  "homepage": "https://github.com/diegopaff/code-verifier-backend_01#readme"
+}
