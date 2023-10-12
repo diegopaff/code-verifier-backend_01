@@ -30,3 +30,8 @@ helloRouter.route('/')
 ```
 
 ## Server
+
+
+**Definimos el CORS**
+-Controlamos quien puede hacer peticiones a nuestro servidor.
+-Nos permite recibir peticiones con url o dominios distintos a la que esta definida nuestra aplicación.

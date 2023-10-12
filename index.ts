@@ -1,26 +1,20 @@
-import express, { Express, Request, Response } from "express"
-import dotenv from 'dotenv'
+// Enviroment Variables
+import dotenv from 'dotenv';
+import server from './src/server';
+import { LogError, LogSucces } from './src/utils/logger';
 
-// Configuration the .env file
-dotenv.config()
 
-// Create Express APP
-const app: Express = express()
-const port: string | number = process.env.PORT || 8000
+// * Configuration the .env file
+dotenv.config();
 
-// Define the first Route of APP
-app.get('/', (req: Request, res: Response) => {
-  // Send hello world
-  res.send('APP Restful: Express + Swagger + Mongoose')
-})
+const port = process.env.PORT || 8000;
 
-// Define a second route
-app.get('/hello', (req: Request, res: Response) => {
-  // Send hello world
-  res.send('Welcome to GET Route: Hello')
-})
+// * Execute SERVER
 
-// Execute APP and Liste Request to PORT
-app.listen(port, () => {
-  console.log(`EXPRESS SERVER: Running at http://localhost:${port}`)
-})
+server.listen(port, ()=> {
+  LogSucces(`[SERVER ON]: Running in http://localhost:${port}/api`);
+});
+
+server.on('error', (error) => {
+  LogError(`[SERVER ERROR]: ${error}`);
+});
